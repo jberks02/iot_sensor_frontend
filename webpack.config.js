@@ -1,6 +1,6 @@
 // webpack.config.js
-const path = require('path')
-const webpack = require('webpack')
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/index.tsx', // our entry point, as mentioned earlier
@@ -23,7 +23,6 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js', // our output bundle
-
     },
     devServer: {
         static: {
@@ -33,8 +32,8 @@ module.exports = {
         devMiddleware: {
             publicPath: 'http://localhost:3000/dist/',
         },
-        hot: true,
+        hot: true
     },
     plugins: [new webpack.HotModuleReplacementPlugin()], // used for hot reloading when developing
     devtool: 'eval-source-map', // builds high quality source maps
-}
+};
